@@ -25,3 +25,20 @@ $location_of_menu = array(
 );
 register_nav_menus($location_of_menu);
 // ============================Hooks================================
+function mytheme_enqueue_scripts_styles()
+{
+    // we can embed any script inside our wordpress theme
+    // wp_enqueue_script('my-custom-script', get_template_directory_uri() . "/assets/js/mytheme.js");
+    wp_enqueue_script('my-custom-script', get_template_directory_uri() . "/assets/js/mytheme.js", array('jquery'), false, true);
+    // we can embed any style inside our wordpress theme
+    wp_enqueue_style('my-custom-script', get_template_directory_uri() . "/assets/css/mytheme.css");
+    // we can register a style before embedding the style into wordpress theme
+    // wp_register_style();
+    // we can register a script before embedding the script into wordpress theme 
+    // wp_register_script(); 
+    // we can remove any script functionality
+    // wp_dequeue_style(); 
+    // we can remove any style functionality
+    // wp_dequeue_script(); 
+}
+add_action("wp_enqueue_scripts", 'mytheme_enqueue_scripts_styles');

@@ -135,3 +135,20 @@ register_nav_menus($location_of_menu);
 > 2. Filter Hooks: Perform certain task but as well as return value <br>
 
     -> add_filter(); -> remove_filter(); -> apply_filters();
+
+## Add Static Resources CSS - JS Files
+
+> We have different hooks to add css and javascript files in wordpress
+
+```
+    wp_enqueue_script(handle, path, dependency array, version, header/footer location); // we can embed any script inside our wordpress theme
+    e.g:vwp_enqueue_script('my-custom-script', get_template_directory_uri() . "/assets/js/mytheme.js", array('jquery'), false, true);
+    wp_enqueue_style(handle, path, dependency array, version, media type); // we can embed any style inside our wordpress theme
+    e.g: wp_enqueue_style('my-custom-script', get_template_directory_uri() . "/assets/css/mytheme.css");
+    wp_register_style(); // we can register a style before embedding the style into wordpress theme
+    wp_register_script(); // we can register a script before embedding the script into wordpress theme
+    wp_dequeue_style(); // we can remove any script functionality
+    wp_dequeue_script(); // we can remove any style functionality
+    wp_deregister_script();
+    wp_deregister_style();
+```
