@@ -24,3 +24,4 @@ $location_of_menu = array(
     'secondary-menu' => 'Navigation Menu Two'
 );
 register_nav_menus($location_of_menu);
+// ============================Hooks================================

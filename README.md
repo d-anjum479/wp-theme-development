@@ -104,3 +104,34 @@ register_nav_menus($location_of_menu);
 
     wp_nav_menu($primary_menu);
 ```
+
+## Folder Structure of Theme Development
+
+> Parent Theme: assets -> (css, images, js) <br>
+> inc ->
+
+## Step 7: WordPress Hooks & Some Important Functions
+
+> Some imp functions to access/add php files
+> All these functions will return the path to your root theme directory
+
+```
+    echo get_template_directory(); //works in parent theme -  use to add php file in functions.php - to give path
+    echo get_template_directory_uri(); // Return url of parent theme
+    echo get_stylesheet_directory(); //works in child theme - use to add php file in functions.php - to give path
+    echo get_stylesheet_directory_uri(); // Return url of child theme
+    echo get_stylesheet_uri(); // give complete path of style.css file
+```
+
+### WordPress Important Hooks
+
+> Hooks are the checkpoints used to modify an existing feature and functionality <br>
+> Hooks are the checkpoints used to add new feature and functionality <br>
+>
+> 1. Action Hooks: Perform certain task but Do not return any value <br>
+
+    -> add_action(); -> do_action(); -> remove_action();
+
+> 2. Filter Hooks: Perform certain task but as well as return value <br>
+
+    -> add_filter(); -> remove_filter(); -> apply_filters();
