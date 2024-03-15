@@ -5,7 +5,7 @@
     <?php bloginfo('description'); ?>
     <?php get_footer(); ?>
     <br>
-    <h2>Single.php</h2>
+    <h2>Archive.php</h2>
     <?php
     if (have_posts()) :
         while (have_posts()) :
