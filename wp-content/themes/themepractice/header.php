@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . "/assets/css/bootstrap.css" ?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . "/assets/css/myStyle.css" ?>">
+    <title><?php
+            bloginfo('name');
+            wp_title();
+            ?></title>
+    <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
     <header>
+        <div><?php get_current_template(true); ?></div>
         <!-- Navbar -->
         <nav class="nav-header" style="background-color: #6351ce !important;">
             <div class="logo">

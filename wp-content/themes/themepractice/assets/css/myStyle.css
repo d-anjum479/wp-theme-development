@@ -1,66 +1,104 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-*a{
-    text-decoration: none;
+*a {
+  text-decoration: none;
 }
-.nav-header{
-    padding: 0px 20px;
-    display: flex;
-    align-items: center;
+.nav-header {
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
 }
-.nav-header .logo{
-    max-width: 100px;
+.nav-header .logo {
+  max-width: 100px;
 }
-.nav-header .logo img{
-    width: 100%;
+.nav-header .logo img {
+  width: 100%;
 }
-.myNavbar{
-    display: flex;
-    align-items: center;
-    margin-bottom: 0px;
+.myNavbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
 }
-.myNavbar li{
-    list-style: none;
-    /* background-color: red; */
-    padding: 20px;
+.myNavbar > li {
+  list-style: none;
+  /* background-color: red; */
+  padding: 20px;
+  position: relative;
 }
-.myNavbar li a{
-    color: white;
-    text-decoration: none;
+.myNavbar .sub-menu {
+  position: absolute;
+  left: 0px;
+  /* background-color: red; */
+  margin-top: 10px;
+  background-color: white;
+  padding: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.myNavbar > li:hover .sub-menu {
+  visibility: visible;
+  opacity: 1;
+}
+.myNavbar .sub-menu li {
+  list-style: none;
+  width: 200px;
+}
+.myNavbar .sub-menu li a {
+  display: block;
+  padding: 5px;
+  color: black;
+}
+.myNavbar .sub-menu li a:hover {
+  color: white;
+  background-color: orange;
+}
+.myNavbar li a {
+  color: white;
+  text-decoration: none;
 }
 /* Link Active CSS */
-.current-menu-item a{
-    color: orange !important;
+.current-menu-item > a {
+  color: orange !important;
 }
 
-a.page-numbers, span.page-numbers{
-    /* background-color: red; */
-    display: inline-block;
-    padding:  0px 5px;
-    border: 1px solid orange;
-    text-decoration: none;
+a.page-numbers,
+span.page-numbers {
+  /* background-color: red; */
+  display: inline-block;
+  padding: 0px 5px;
+  border: 1px solid orange;
+  text-decoration: none;
 }
-span.page-numbers.current{
-    color: green;
-    /* border: 1px solid green; */
+span.page-numbers.current {
+  color: green;
+  /* border: 1px solid green; */
 }
-.screen-reader-text{
-    display: none;
+.screen-reader-text {
+  display: none;
 }
 /* Blog page css */
-ul.post-categories{
-    display: flex;
+ul.post-categories {
+  display: flex;
 }
-ul.post-categories li{
-    list-style: none;
-    margin-right: 5px;
+ul.post-categories li {
+  list-style: none;
+  margin-right: 5px;
 }
-ul.post-categories li::after{
-    content: ',';
+ul.post-categories li::after {
+  content: ",";
 }
-ul.post-categories li a{
-    text-decoration: none;
+ul.post-categories li a {
+  text-decoration: none;
+}
+/* sub menu css */
+ul.sub-menu {
+  display: flex;
+  flex-direction: column;
+}
+ul.sub-menu li {
+  padding: 0;
 }
