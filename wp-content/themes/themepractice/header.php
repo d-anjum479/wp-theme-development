@@ -19,7 +19,9 @@
             </div>
             <?php wp_nav_menu(array('theme_location' => 'primary-menu', 'menu_class' => 'myNavbar')); ?>
         </nav>
-        <?php get_breadcrumb(); ?>
+        <div class="py-3">
+            <?php get_breadcrumb(); ?>
+        </div>
         <!-- Navbar -->
         <!-- Background image -->
     </header>

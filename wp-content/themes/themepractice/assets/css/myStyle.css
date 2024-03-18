@@ -50,3 +50,17 @@ span.page-numbers.current{
 .screen-reader-text{
     display: none;
 }
+/* Blog page css */
+ul.post-categories{
+    display: flex;
+}
+ul.post-categories li{
+    list-style: none;
+    margin-right: 5px;
+}
+ul.post-categories li::after{
+    content: ',';
+}
+ul.post-categories li a{
+    text-decoration: none;
+}
